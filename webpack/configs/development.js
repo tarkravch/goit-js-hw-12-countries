@@ -13,7 +13,7 @@ module.exports = env => ({
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader', 'handlebars-loader'],
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader', 'handlebars-loader', 'pnotify'],
             },
         ],
     },
@@ -21,6 +21,11 @@ module.exports = env => ({
         new HtmlWebpackPlugin({
             template: './index.html',
         }),
+        new PNotify({
+            title: "Notification!",
+            text: "Будь ласка уточніть запит"
+        }),
+
     ],
     devServer: {
         contentBase: paths.BUILD_DIR,

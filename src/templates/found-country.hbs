@@ -1,0 +1,27 @@
+{{#each this}}
+<section class="found-country">
+	<h1 class="country-name">{{this.name}}</h1>
+	<div class="country-info">
+		<ul class="info-positions">
+			<li class="info-item">
+				<p class="item-name">Capital:</p>
+				<p class="item-value">{{this.capital}}</p>
+			</li>
+			<li class="info-item">
+				<p class="item-name">Population:</p>
+				<p class="item-value">{{this.population}}</p>
+			</li>
+			<li class="info-item">
+				<p class="item-name">Languages:</p>
+				<ul class="list-group">
+					{{#each languages}}
+					<li class="list-item item-value">{{this.name}}</li>
+					{{/each}}
+				</ul>
+			</li>
+		</ul>
+		<img src={{this.flag}} alt={{this.name}} class="country-flag">
+	</div>
+
+</section>
+{{/each}}
