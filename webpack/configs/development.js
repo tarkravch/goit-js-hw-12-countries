@@ -21,10 +21,10 @@ module.exports = env => ({
         new HtmlWebpackPlugin({
             template: './index.html',
         }),
-        new PNotify({
-            title: "Notification!",
-            text: "Будь ласка уточніть запит"
-        }),
+        /*  new PNotify({
+             title: "Notification!",
+             text: "Будь ласка уточніть запит"
+         }), */
 
     ],
     devServer: {
